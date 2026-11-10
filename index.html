@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MNZ Perde | Buca İzmir – Özel Ölçü Perde, Jaluzi ve Akıllı Ev</title>
+<meta name="description" content="MNZ Perde, Buca İzmir: özel ölçü tül ve fon perde, stor, zebra, plise, ahşap jaluzi, motorlu perde, duvar kağıdı ve döşemelik kumaş. Ölçü, tasarım, imalat ve montaj tek elden.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --linen:#F5F0E8; --linen-2:#EDE5D8; --paper:#FBF8F3;
+  --ink:#1E1C1A; --ink-2:#4A4540; --muted:#7A726A;
+  --brass:#A8743A; --brass-d:#8A5D2B; --brass-l:#E9D6BC;
+  --line:rgba(30,28,26,.12);
+  --r:14px;
+  --serif:"Fraunces",Georgia,serif; --sans:"Manrope",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:linear-gradient(180deg,#FBF8F3 0%,#F4EDE2 50%,#F7F2EA 100%) fixed;line-height:1.6;-webkit-font-smoothing:antialiased}
+/* beyaz tül arka plan */
+#sheer{position:fixed;inset:0;width:100vw;height:100vh;z-index:-1;pointer-events:none}
+.sun{position:fixed;z-index:-2;pointer-events:none;width:70vmax;height:70vmax;border-radius:50%;right:-20vmax;top:-25vmax;background:radial-gradient(circle,rgba(255,226,180,.55),rgba(255,226,180,0) 65%)}
+/* cam (glassmorphism) */
+.glass{background:linear-gradient(135deg,rgba(255,255,255,.62),rgba(255,255,255,.32))!important;backdrop-filter:blur(18px) saturate(150%);-webkit-backdrop-filter:blur(18px) saturate(150%);border:1px solid rgba(255,255,255,.75)!important;box-shadow:0 24px 60px -30px rgba(70,50,25,.35),inset 0 1px 0 rgba(255,255,255,.9),inset 0 -1px 0 rgba(255,255,255,.25)}
+.glass-dark{background:linear-gradient(135deg,rgba(255,255,255,.10),rgba(255,255,255,.03))!important;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.18)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.18)}
+.sheen{position:relative;overflow:hidden}
+.sheen::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;pointer-events:none;background:linear-gradient(105deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-18deg);transition:left .9s ease}
+.sheen:hover::after{left:130%}
+.fg{position:absolute;z-index:0;border-radius:28px;pointer-events:none;animation:float 12s ease-in-out infinite}
+.fg1{width:220px;height:280px;left:-60px;top:12%;animation-delay:-3s}
+.fg2{width:160px;height:160px;right:6%;bottom:6%;border-radius:50%;animation-delay:-7s}
+.fg3{width:120px;height:70px;left:38%;top:8%;border-radius:18px}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-22px) rotate(2deg)}}
+.hero-grid{position:relative;z-index:1}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,92vw);margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.1;letter-spacing:-.01em}
+.eyebrow{font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--brass)}
+.btn{display:inline-flex;align-items:center;gap:.55rem;padding:.95rem 1.5rem;border-radius:999px;font-weight:600;font-size:.95rem;transition:transform .2s,background .2s,box-shadow .2s;cursor:pointer;border:0;font-family:inherit}
+.btn:hover{transform:translateY(-2px)}
+.btn-dark{background:var(--ink);color:var(--linen)}
+.btn-dark:hover{box-shadow:0 10px 24px -10px rgba(0,0,0,.5)}
+.btn-line{border:1.5px solid var(--ink);color:var(--ink);background:transparent}
+.btn-line:hover{background:var(--ink);color:var(--linen)}
+.btn-wa{background:#1F8F55;color:#fff}
+.btn svg{width:18px;height:18px}
+
+/* NAV */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.45);backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);border-bottom:1px solid rgba(255,255,255,.7);box-shadow:0 8px 30px -20px rgba(60,40,20,.3)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{display:flex;align-items:center;gap:.7rem;font-weight:700;letter-spacing:.2em;font-size:1.05rem}
+.logo-mark{width:38px;height:38px;border-radius:10px;background:var(--ink);display:grid;place-items:center}
+.logo small{display:block;font-size:.6rem;letter-spacing:.32em;color:var(--muted);font-weight:600;margin-top:2px}
+.nav ul{display:flex;gap:2rem;list-style:none;font-size:.92rem;font-weight:500;color:var(--ink-2)}
+.nav ul a:hover{color:var(--brass)}
+.nav .btn{padding:.7rem 1.15rem;font-size:.88rem}
+.menu-btn{display:none;background:none;border:0;cursor:pointer;padding:.4rem}
+@media(max-width:920px){.nav ul{display:none}.nav ul.open{display:flex;position:absolute;top:74px;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);border-bottom:1px solid var(--line)}.nav ul.open li a{display:block;padding:1rem 4vw;border-top:1px solid var(--line)}.menu-btn{display:block}.nav .btn-call span{display:none}}
+
+/* HERO */
+.hero{background:transparent;overflow:hidden;position:relative}
+.pane::after,.sim-pane::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:5;
+  background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.38) 38%,rgba(255,255,255,.08) 44%,transparent 52%,transparent 62%,rgba(255,255,255,.22) 66%,transparent 72%);
+  background-size:250% 100%;animation:glare 9s ease-in-out infinite}
+@keyframes glare{0%,100%{background-position:100% 0}50%{background-position:0 0}}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:4rem;align-items:center;padding:5.5rem 0 6rem}
+.hero h1{font-size:clamp(2.6rem,5.6vw,4.7rem);margin:1.1rem 0 1.4rem}
+.hero h1 em{font-style:italic;color:var(--brass)}
+.hero p.lead{font-size:1.12rem;color:var(--ink-2);max-width:34rem}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2.2rem}
+.trust{display:flex;flex-wrap:wrap;gap:2.2rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--line)}
+.trust div strong{display:block;font-family:var(--serif);font-size:1.7rem;font-weight:500}
+.trust div span{font-size:.82rem;color:var(--muted)}
+.stars{color:#E0A526;letter-spacing:2px;font-size:1rem}
+
+.window{position:relative;aspect-ratio:4/5;border-radius:200px 200px 18px 18px;background:#fff;padding:16px;box-shadow:0 40px 80px -40px rgba(60,40,20,.45)}
+.pane{position:relative;width:100%;height:100%;border-radius:186px 186px 8px 8px;overflow:hidden;
+  background:linear-gradient(180deg,#9EC3DB 0%,#CFE0E6 45%,#F3E3C8 70%,#E9C9A0 100%)}
+.pane::before{content:"";position:absolute;left:0;right:0;bottom:0;height:34%;
+  background:
+   linear-gradient(180deg,transparent 0 30%,rgba(70,90,80,.55) 30%),
+   repeating-linear-gradient(90deg,#B9A58C 0 14%,#C9B79F 14% 22%,#A99377 22% 34%,#D3C3AB 34% 40%);
+  clip-path:polygon(0 40%,8% 30%,14% 38%,24% 18%,32% 32%,44% 22%,52% 35%,64% 12%,72% 30%,84% 20%,92% 34%,100% 26%,100% 100%,0 100%)}
+.mullion{position:absolute;inset:0;pointer-events:none;background:
+  linear-gradient(90deg,transparent calc(50% - 4px),#fff calc(50% - 4px) calc(50% + 4px),transparent calc(50% + 4px))}
+.hero-blind{position:absolute;left:0;right:0;top:0;height:58%;transform-origin:top;
+  background:repeating-linear-gradient(180deg,#F4EEE4 0 26px,rgba(244,238,228,.35) 26px 46px);
+  box-shadow:0 6px 16px -6px rgba(0,0,0,.25);animation:blind 7s ease-in-out infinite alternate}
+.hero-blind::after{content:"";position:absolute;left:0;right:0;bottom:-10px;height:12px;background:linear-gradient(#D9CDBB,#BFAF97);border-radius:0 0 4px 4px}
+@keyframes blind{0%{height:22%}100%{height:64%}}
+.drape{position:absolute;top:-8px;bottom:-24px;width:30%;z-index:2;
+  background:repeating-linear-gradient(90deg,#B08A5E 0 9px,#C7A57A 9px 18px,#9C774D 18px 24px,#BD9A6E 24px 34px);
+  box-shadow:inset -10px 0 20px rgba(0,0,0,.18)}
+.drape.l{left:-26px;border-radius:0 0 40% 0;transform:skewX(2deg)}
+.drape.r{right:-26px;border-radius:0 0 0 40%;transform:skewX(-2deg)}
+.rod{position:absolute;top:-22px;left:-44px;right:-44px;height:8px;border-radius:4px;background:linear-gradient(#2B2724,#55504A);z-index:3}
+.rod::before,.rod::after{content:"";position:absolute;top:-5px;width:18px;height:18px;border-radius:50%;background:#2B2724}
+.rod::before{left:-6px}.rod::after{right:-6px}
+.badge{position:absolute;z-index:4;background:var(--paper);border-radius:14px;padding:.9rem 1.1rem;box-shadow:0 18px 40px -18px rgba(0,0,0,.35);font-size:.85rem}
+.badge strong{display:block;font-size:1rem}
+.badge.b1{left:-38px;bottom:16%}
+.badge.b2{right:-24px;top:22%}
+.badge .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#1F8F55;margin-right:6px}
+@media(max-width:920px){.hero-grid{grid-template-columns:1fr;gap:3.5rem;padding:3.5rem 0 4.5rem}.window{max-width:380px;margin-inline:auto}.badge.b1{left:-8px}.badge.b2{right:-8px}}
+
+/* MARQUEE */
+.strip{background:var(--ink);color:var(--linen);overflow:hidden;padding:1.1rem 0;white-space:nowrap}
+.strip-track{display:inline-flex;gap:3rem;animation:mq 30s linear infinite;font-family:var(--serif);font-size:1.25rem;font-style:italic}
+.strip-track span::after{content:"✦";margin-left:3rem;color:var(--brass);font-style:normal;font-size:.8rem;vertical-align:middle}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+section{padding:6.5rem 0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:3.2rem;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(2rem,3.8vw,3.1rem);max-width:40rem;margin-top:.8rem}
+.sec-head p{max-width:26rem;color:var(--ink-2)}
+
+/* PRODUCTS */
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-6px);box-shadow:0 26px 50px -30px rgba(60,40,20,.5)}
+.swatch{height:170px;position:relative}
+.card .body{padding:1.25rem 1.3rem 1.5rem}
+.card h3{font-size:1.3rem;margin-bottom:.4rem}
+.card p{font-size:.9rem;color:var(--muted)}
+.tag{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.92);font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .6rem;border-radius:999px}
+.p-tul{background:repeating-linear-gradient(90deg,rgba(255,255,255,.95) 0 10px,rgba(236,228,215,.9) 10px 16px,rgba(255,255,255,.7) 16px 22px),linear-gradient(#DCE7EC,#F2E7D6)}
+.p-fon{background:repeating-linear-gradient(90deg,#6E5A45 0 14px,#8A735A 14px 26px,#5E4C3A 26px 32px,#7C6650 32px 44px)}
+.p-stor{background:linear-gradient(180deg,#CDBDA6 0 78%,#9C8A72 78% 81%,#E8DFD2 81%)}
+.p-zebra{background:repeating-linear-gradient(180deg,#3E3A36 0 22px,rgba(62,58,54,.25) 22px 38px),linear-gradient(#D7E3E8,#EDE3D2)}
+.p-plise{background:repeating-linear-gradient(180deg,#EADFCD 0 6px,#D5C6AF 6px 8px,#F4ECDF 8px 12px)}
+.p-jaluzi{background:repeating-linear-gradient(180deg,#9B6B3F 0 14px,#B9875A 14px 17px,#7E5530 17px 19px,#E9DCC9 19px 24px)}
+.p-motor{background:radial-gradient(circle at 78% 30%,rgba(168,116,58,.35) 0 18%,transparent 19%),linear-gradient(180deg,#2E2B28 0 70%,#55504A 70% 73%,#E8DFD2 73%)}
+.p-duvar{background-color:#E9E0D2;background-image:radial-gradient(circle at 25% 25%,#C9B391 0 6px,transparent 7px),radial-gradient(circle at 75% 75%,#C9B391 0 6px,transparent 7px),radial-gradient(circle at 75% 25%,transparent 0 10px,rgba(168,116,58,.25) 11px 12px,transparent 13px),radial-gradient(circle at 25% 75%,transparent 0 10px,rgba(168,116,58,.25) 11px 12px,transparent 13px);background-size:44px 44px}
+.p-kumas{background-color:#7A4E3A;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.08) 0 2px,transparent 2px 6px),repeating-linear-gradient(-45deg,rgba(0,0,0,.12) 0 2px,transparent 2px 6px)}
+.motor-ico{position:absolute;right:18px;top:18px;width:46px;height:46px;border-radius:50%;background:var(--paper);display:grid;place-items:center}
+@media(max-width:1000px){.products{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.products{grid-template-columns:1fr}}
+
+/* SIMULATOR */
+.sim{background:rgba(237,229,216,.3)}
+.sim-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3.5rem;align-items:center}
+.room{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:5/4;background:linear-gradient(180deg,#EFE7DA 0 78%,#C4AE8F 78%)}
+.room::after{content:"";position:absolute;left:0;right:0;bottom:0;height:22%;background:repeating-linear-gradient(90deg,#B89C77 0 70px,#AD9069 70px 72px)}
+.sim-win{position:absolute;left:18%;right:18%;top:12%;bottom:30%;background:#fff;padding:10px;border-radius:6px;box-shadow:0 20px 40px -24px rgba(0,0,0,.4)}
+.sim-pane{position:relative;width:100%;height:100%;overflow:hidden;border-radius:2px;background:linear-gradient(180deg,#8EB7D1,#D7E6EA 55%,#E9D3B3)}
+.sim-pane::before{content:"";position:absolute;left:0;right:0;bottom:0;height:32%;background:#9FAF9A;clip-path:polygon(0 50%,15% 30%,30% 45%,48% 20%,62% 40%,80% 25%,100% 42%,100% 100%,0 100%)}
+.sim-blind{position:absolute;left:0;right:0;top:0;height:60%;transition:height .35s ease,background .3s;box-shadow:0 4px 10px -4px rgba(0,0,0,.3)}
+.sim-blind::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:7px;background:var(--bar,#8a7a66);border-radius:0 0 3px 3px}
+.sim-box{position:absolute;left:-6px;right:-6px;top:-4px;height:12px;background:#F2EEE8;border-radius:3px;z-index:2;box-shadow:0 2px 4px rgba(0,0,0,.15)}
+.sofa{position:absolute;left:22%;right:22%;bottom:14%;height:15%;background:#5C6B5E;border-radius:16px 16px 6px 6px;box-shadow:inset 0 -14px 0 rgba(0,0,0,.12)}
+.sofa::before{content:"";position:absolute;left:-5%;right:-5%;bottom:0;height:60%;background:#66766A;border-radius:14px}
+.sim-panel h3{font-size:1.15rem;margin:1.6rem 0 .8rem;font-family:var(--sans);font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chip{border:1.5px solid var(--line);background:var(--paper);padding:.55rem 1rem;border-radius:999px;font-size:.88rem;font-weight:600;cursor:pointer;font-family:inherit;color:var(--ink-2)}
+.chip.on{background:var(--ink);border-color:var(--ink);color:var(--linen)}
+.colors{display:flex;gap:.6rem}
+.color{width:38px;height:38px;border-radius:50%;border:3px solid var(--paper);box-shadow:0 0 0 1.5px var(--line);cursor:pointer}
+.color.on{box-shadow:0 0 0 2px var(--ink)}
+input[type=range]{width:100%;accent-color:var(--brass)}
+.sim-note{font-size:.82rem;color:var(--muted);margin-top:1.4rem}
+@media(max-width:920px){.sim-grid{grid-template-columns:1fr}}
+
+/* PROCESS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--ink)}
+.step{padding:2rem 1.6rem 0 0}
+.step + .step{padding-left:1.6rem;border-left:1px solid var(--line)}
+.step .n{font-family:var(--serif);font-size:3rem;color:var(--brass);line-height:1}
+.step h3{font-size:1.35rem;margin:1rem 0 .5rem}
+.step p{font-size:.92rem;color:var(--ink-2)}
+.sameday{margin-top:3rem;display:flex;gap:1.5rem;align-items:center;background:var(--ink);color:var(--linen);border-radius:var(--r);padding:1.8rem 2rem;flex-wrap:wrap}
+.sameday .big{font-family:var(--serif);font-size:clamp(1.5rem,2.6vw,2.1rem);flex:1;min-width:16rem}
+.sameday .big em{color:var(--brass-l)}
+@media(max-width:860px){.steps{grid-template-columns:1fr 1fr}.step:nth-child(3){padding-left:0;border-left:0}.step{padding-bottom:2rem}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}.step + .step{padding-left:0;border-left:0;border-top:1px solid var(--line)}}
+
+/* INTERIOR */
+.interior{background:rgba(30,28,26,.86);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);color:var(--linen)}
+.int-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.int-card{border:1px solid rgba(245,240,232,.18);border-radius:var(--r);padding:2.4rem;min-height:300px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.int-card h3{font-size:2rem;margin-bottom:.8rem}
+.int-card p{color:rgba(245,240,232,.72);max-width:28rem}
+.int-card ul{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.6rem}
+.int-card li{font-size:.8rem;border:1px solid rgba(245,240,232,.25);padding:.35rem .8rem;border-radius:999px}
+.int-card .deco{position:absolute;right:-40px;top:-40px;width:200px;height:200px;border-radius:50%;border:1px solid rgba(168,116,58,.5)}
+.int-card .deco::after{content:"";position:absolute;inset:30px;border-radius:50%;border:1px solid rgba(168,116,58,.3)}
+.interior .sec-head p{color:rgba(245,240,232,.7)}
+@media(max-width:820px){.int-grid{grid-template-columns:1fr}}
+
+/* GALLERY */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:1rem}
+.g{border-radius:var(--r);position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:1rem}
+.g span{background:rgba(255,255,255,.92);font-size:.78rem;font-weight:600;padding:.35rem .75rem;border-radius:999px}
+.g.tall{grid-row:span 2}.g.wide{grid-column:span 2}
+.g.ph::before{content:"Fotoğraf eklenecek";position:absolute;top:12px;right:12px;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(30,28,26,.55);background:rgba(255,255,255,.6);padding:.2rem .5rem;border-radius:4px}
+@media(max-width:860px){.gallery{grid-template-columns:repeat(2,1fr)}.g.wide{grid-column:span 2}}
+.insta{display:flex;justify-content:center;margin-top:2.4rem}
+
+/* REVIEWS */
+.reviews{background:transparent}
+.faq-sec{background:transparent}
+.faq{border-radius:22px;padding:.6rem 2.2rem}
+details:last-child{border-bottom:0}
+input,select,textarea{background:rgba(255,255,255,.55)!important}
+.chip{background:rgba(255,255,255,.5)}
+.info-list .ic{background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.8);backdrop-filter:blur(10px)}
+.rev{display:grid;grid-template-columns:auto 1fr auto;gap:3rem;align-items:center;background:#fff;border:1px solid var(--line);border-radius:22px;padding:2.6rem 3rem}
+.score{font-family:var(--serif);font-size:5rem;line-height:1}
+.rev h2{font-size:clamp(1.6rem,2.8vw,2.3rem)}
+.rev p{color:var(--ink-2);margin-top:.5rem}
+@media(max-width:860px){.rev{grid-template-columns:1fr;gap:1.4rem;padding:2rem}}
+
+/* FORM */
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:3.5rem;align-items:start}
+.info-list{list-style:none;margin-top:2rem;display:grid;gap:1.3rem}
+.info-list li{display:flex;gap:1rem;align-items:flex-start}
+.info-list .ic{flex:none;width:44px;height:44px;border-radius:12px;background:var(--linen);display:grid;place-items:center}
+.info-list .ic svg{width:20px;height:20px;color:var(--brass)}
+.info-list small{display:block;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.info-list b{font-weight:600}
+.info-list a:hover{color:var(--brass)}
+form{background:#fff;border:1px solid var(--line);border-radius:22px;padding:2.4rem}
+form h3{font-size:1.8rem;margin-bottom:.4rem}
+form > p{color:var(--muted);font-size:.92rem;margin-bottom:1.6rem}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+label{display:block;font-size:.8rem;font-weight:700;margin-bottom:1rem;color:var(--ink-2)}
+input,select,textarea{display:block;width:100%;margin-top:.4rem;padding:.85rem 1rem;border:1.5px solid var(--line);border-radius:10px;font:inherit;font-weight:500;background:var(--paper);color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--brass)}
+textarea{min-height:90px;resize:vertical}
+.form-actions{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center;margin-top:.4rem}
+.form-hint{font-size:.8rem;color:var(--muted)}
+.form-hint.err{color:#B3402A}
+@media(max-width:860px){.contact-grid{grid-template-columns:1fr}.row{grid-template-columns:1fr}form{padding:1.6rem}}
+
+/* FAQ */
+.faq{max-width:820px;margin-inline:auto}
+details{border-bottom:1px solid var(--line);padding:1.4rem 0}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:1rem;font-family:var(--serif);font-size:1.3rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--sans);color:var(--brass);font-size:1.5rem;line-height:1;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin-top:.8rem;color:var(--ink-2);max-width:44rem}
+
+footer{background:var(--ink);color:rgba(245,240,232,.7);padding:3.5rem 0 2rem;font-size:.9rem}
+.foot{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;padding-bottom:2rem;border-bottom:1px solid rgba(245,240,232,.15)}
+.foot .logo{color:var(--linen)}
+.foot .logo-mark{background:var(--brass)}
+.foot nav{display:flex;gap:1.6rem;flex-wrap:wrap}
+.foot nav a:hover{color:var(--linen)}
+.copy{padding-top:1.5rem;font-size:.8rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;background:#1F8F55;display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(31,143,85,.7);transition:transform .2s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:30px;height:30px;color:#fff}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="sun" aria-hidden="true"></div>
+<canvas id="sheer" aria-hidden="true"></canvas>
+
+<svg width="0" height="0" style="position:absolute">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.06c-.24.68-1.42 1.31-1.95 1.36-.5.05-.97.23-3.28-.68-2.78-1.1-4.55-3.95-4.69-4.13-.13-.18-1.12-1.49-1.12-2.84s.71-2.01.96-2.29c.25-.27.55-.34.73-.34h.52c.17 0 .4-.06.62.47.24.56.8 1.94.87 2.08.07.14.12.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.2 1.37.27.14.43.12.59-.07.16-.18.68-.8.86-1.07.18-.27.36-.23.61-.14.25.09 1.6.75 1.87.89.27.14.46.2.52.32.07.11.07.66-.17 1.33Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo">
+      <span class="logo-mark"><svg width="20" height="20" viewBox="0 0 20 20"><g fill="#F5F0E8"><rect x="2" y="2" width="16" height="2" rx="1"/><rect x="3" y="6" width="14" height="2" opacity=".8"/><rect x="3" y="10" width="14" height="2" opacity=".6"/><rect x="3" y="14" width="14" height="2" opacity=".4"/></g></svg></span>
+      <span>MNZ PERDE<small>BUCA · İZMİR</small></span>
+    </a>
+    <ul id="menu">
+      <li><a href="#urunler">Ürünler</a></li>
+      <li><a href="#dene">Perdenizi Deneyin</a></li>
+      <li><a href="#surec">Nasıl Çalışıyoruz</a></li>
+      <li><a href="#ic-mimari">İç Mimari</a></li>
+      <li><a href="#iletisim">İletişim</a></li>
+    </ul>
+    <div style="display:flex;gap:.5rem;align-items:center">
+      <a class="btn btn-dark btn-call" href="tel:+905423066604"><svg><use href="#i-phone"/></svg><span>0542 306 66 04</span></a>
+      <button class="menu-btn" aria-label="Menü" onclick="document.getElementById('menu').classList.toggle('open')"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" stroke="#1E1C1A" stroke-width="2" stroke-linecap="round"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero" style="padding:0">
+  <div class="fg glass fg1"></div><div class="fg glass fg2"></div><div class="fg glass fg3"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Perde · Jaluzi · Akıllı Ev · İç Mimari</span>
+      <h1>Sabah ölçü,<br><em>akşam montaj.</em></h1>
+      <p class="lead">Buca'daki atölyemizde pencerenize özel perdeleri ölçüyor, tasarlıyor, imal ediyor ve monte ediyoruz. Tül ve fon perdeden plise, zebra ve ahşap jaluziye, motorlu sistemlere kadar her şey tek elden.</p>
+      <div class="hero-cta">
+        <a class="btn btn-dark" href="#iletisim">Ölçü randevusu al <svg><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-wa" href="https://wa.me/905423066604?text=Merhaba%20MNZ%20Perde%2C%20perde%20i%C3%A7in%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg> WhatsApp</a>
+      </div>
+      <div class="trust">
+        <div><strong>5,0 <span class="stars">★★★★★</span></strong><span>Google müşteri puanı</span></div>
+        <div><strong>4 adım</strong><span>Ölçü · tasarım · imalat · montaj</span></div>
+        <div><strong>Aynı gün</strong><span>Plise perdede montaj</span></div>
+      </div>
+    </div>
+    <div style="position:relative;padding:30px 40px 30px">
+      <div class="window">
+        <div class="rod"></div>
+        <div class="drape l"></div><div class="drape r"></div>
+        <div class="pane"><div class="hero-blind"></div><div class="mullion"></div></div>
+      </div>
+      <div class="badge glass b1"><strong>Özel ölçü imalat</strong>Her pencereye milimetrik</div>
+      <div class="badge glass b2"><span class="dot"></span><b>Buca mağaza</b><br><span style="color:var(--muted)">Kapanış 20:30</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true"><div class="strip-track">
+  <span>Tül &amp; Fon Perde</span><span>Stor Perde</span><span>Zebra Perde</span><span>Plise Perde</span><span>Ahşap Jaluzi</span><span>Motorlu Perde</span><span>Duvar Kağıdı</span><span>Döşemelik Kumaş</span>
+  <span>Tül &amp; Fon Perde</span><span>Stor Perde</span><span>Zebra Perde</span><span>Plise Perde</span><span>Ahşap Jaluzi</span><span>Motorlu Perde</span><span>Duvar Kağıdı</span><span>Döşemelik Kumaş</span>
+</div></div>
+
+<!-- PRODUCTS -->
+<section id="urunler">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="eyebrow">Ürünlerimiz</span><h2>Her pencere ve her oda için doğru çözüm</h2></div>
+      <p>Kumaşı ve sistemi birlikte seçiyoruz; ışığı, mahremiyeti ve bakımını odanın kullanımına göre ayarlıyoruz.</p>
+    </div>
+    <div class="products">
+      <article class="card glass sheen reveal"><div class="swatch p-tul"><span class="tag">Klasik</span></div><div class="body"><h3>Tül Perde</h3><p>Gün ışığını yumuşatır, mekâna ferahlık katar. Sık ya da seyrek pile seçenekleriyle.</p></div></article>
+      <article class="card glass sheen reveal"><div class="swatch p-fon"><span class="tag">Klasik</span></div><div class="body"><h3>Fon Perde</h3><p>Keten, kadife ve blackout kumaşlarla salona karakter, yatak odasına karanlık.</p></div></article>
+      <article class="card glass sheen reveal"><div class="swatch p-stor"><span class="tag">Modern</span></div><div class="body"><h3>Stor Perde</h3><p>Sade, kolay kullanımlı ve temizliği pratik. Mutfak, ofis ve çocuk odası için ideal.</p></div></article>
+      <article class="card glass sheen reveal"><div class="swatch p-zebra"><span class="tag">Modern</span></div><div class="body"><h3>Zebra Perde</h3><p>Dolu ve tül şeritleri kaydırarak ışığı tek hareketle ayarlayın.</p></div></article>
+      <article class="card glass sheen reveal"><div class="swatch p-plise"><span class="tag">Cam balkon</span></div><div class="body"><h3>Plise Perde</h3><p>Cam balkon ve özel ölçü pencereler için. Aşağıdan ve yukarıdan açılabilir sistemler.</p></div></article>
+      <article class="card glass sheen reveal"><div class="swatch p-jaluzi"><span class="tag">Doğal</span></div><div class="body"><h3>Ahşap Jaluzi</h3><p>Doğal ahşap dokusu, sıcak bir atmosfer ve hassas ışık kontrolü.</p></div></article>
+      <article class="card glass sheen reveal"><div class="swatch p-motor"><span class="motor-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A8743A" stroke-width="2" stroke-linecap="round"><path d="M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19.5" r="1" fill="#A8743A"/></svg></span><span class="tag">Akıllı ev</span></div><div class="body"><h3>Motorlu Perde</h3><p>Kumanda, telefon ya da sesli komutla. Akıllı ev sistemlerine entegre.</p></div></article>
+      <article class="card glass sheen reveal"><div class="swatch p-duvar"><span class="tag">Dekorasyon</span></div><div class="body"><h3>Duvar Kağıdı</h3><p>Perdeyle uyumlu desen ve renklerle odayı baştan sona tamamlayın.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- SIMULATOR -->
+<section class="sim" id="dene">
+  <div class="wrap sim-grid">
+    <div class="room glass reveal" style="padding:0" aria-label="Perde önizleme">
+      <div class="sim-win"><div class="sim-box"></div><div class="sim-pane"><div class="sim-blind" id="blind"></div></div></div>
+      <div class="sofa"></div>
+    </div>
+    <div class="sim-panel reveal">
+      <span class="eyebrow">Perdenizi deneyin</span>
+      <h2 style="font-size:clamp(2rem,3.6vw,2.8rem);margin-top:.8rem">Hangi sistem sizin pencerenize yakışır?</h2>
+      <p style="color:var(--ink-2);margin-top:1rem">Tipi ve rengi seçin, perdeyi açıp kapatın. Kumaşın gerçeğini ölçü randevusunda kartelamızdan birlikte seçeriz.</p>
+      <h3>Perde tipi</h3>
+      <div class="chips" id="types">
+        <button class="chip on" data-t="zebra">Zebra</button>
+        <button class="chip" data-t="stor">Stor</button>
+        <button class="chip" data-t="plise">Plise</button>
+        <button class="chip" data-t="jaluzi">Ahşap jaluzi</button>
+      </div>
+      <h3>Renk</h3>
+      <div class="colors" id="colors">
+        <button class="color on" data-c="krem" style="background:#E8DCC8" aria-label="Krem"></button>
+        <button class="color" data-c="gri" style="background:#8E8A85" aria-label="Gri"></button>
+        <button class="color" data-c="antrasit" style="background:#3C3936" aria-label="Antrasit"></button>
+        <button class="color" data-c="ceviz" style="background:#8B5E37" aria-label="Ceviz"></button>
+      </div>
+      <h3>Açık / kapalı</h3>
+      <input type="range" id="height" min="8" max="100" value="60" aria-label="Perde yüksekliği">
+      <p class="sim-note" id="simText"></p>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="surec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="eyebrow">Nasıl çalışıyoruz</span><h2>Ölçüden montaja, hepsi bizde</h2></div>
+      <p>Aracı yok: ölçüyü alan, perdeyi diken ve takan aynı ekip. Bu yüzden hem hızlıyız hem de ölçü hatası yaşamıyoruz.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="n">01</div><h3>Keşif &amp; ölçü</h3><p>Evinize geliyor, pencereleri ölçüyor, ışığı ve kullanımı yerinde konuşuyoruz.</p></div>
+      <div class="step reveal"><div class="n">02</div><h3>Tasarım &amp; kumaş</h3><p>Kartelalardan kumaşı, sistemi ve rengi birlikte seçiyor, net bir fiyat veriyoruz.</p></div>
+      <div class="step reveal"><div class="n">03</div><h3>İmalat</h3><p>Perdeleriniz kendi atölyemizde, aldığımız ölçülere göre üretiliyor.</p></div>
+      <div class="step reveal"><div class="n">04</div><h3>Montaj</h3><p>Ekibimiz temiz ve özenli bir montajla işi teslim ediyor, kullanımı gösteriyor.</p></div>
+    </div>
+    <div class="sameday glass-dark sheen reveal" style="background:rgba(30,28,26,.82)!important">
+      <div class="big">Özel ölçü plise perdede <em>sabah alınan ölçünün imalatı ve montajı aynı gün akşam.</em></div>
+      <a class="btn" style="background:var(--brass);color:#fff" href="#iletisim">Hemen randevu al <svg><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- INTERIOR -->
+<section class="interior" id="ic-mimari">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="eyebrow">Perdeden fazlası</span><h2>Mimari proje, iç tasarım ve akıllı ev</h2></div>
+      <p>Sadece pencereyi değil, mekânın tamamını düşünüyoruz. Perde, duvar, döşeme ve otomasyon tek bir dilde buluşuyor.</p>
+    </div>
+    <div class="int-grid">
+      <div class="int-card glass-dark reveal"><div class="deco"></div>
+        <div><h3>Mimari proje &amp; iç tasarım</h3><p>Ev, ofis ve ticari mekânlar için renk, doku ve tekstil uyumunu baştan planlıyoruz. Perde, duvar kağıdı ve döşemelik kumaş seçimi tek elden.</p></div>
+        <ul><li>Konut</li><li>Ofis</li><li>Mağaza &amp; kafe</li><li>Döşemelik kumaş</li><li>Duvar kağıdı</li></ul>
+      </div>
+      <div class="int-card glass-dark reveal"><div class="deco"></div>
+        <div><h3>Akıllı ev sistemleri</h3><p>Motorlu perdeler kumanda, telefon ya da sesli asistanla çalışır. Sabah güneşle açılan, akşam kendiliğinden kapanan perdeler kurmak mümkün.</p></div>
+        <ul><li>Motorlu stor &amp; zebra</li><li>Uzaktan kumanda</li><li>Mobil uygulama</li><li>Senaryo &amp; zamanlama</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="galeri">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="eyebrow">Uygulamalarımız</span><h2>İzmir'deki evlerden</h2></div>
+      <p>Tamamladığımız işlerin fotoğraflarını Instagram hesabımızda düzenli paylaşıyoruz.</p>
+    </div>
+    <div class="gallery">
+      <div class="g ph tall p-fon reveal"><span>Salon · Fon &amp; tül</span></div>
+      <div class="g ph wide p-plise reveal"><span>Cam balkon · Plise</span></div>
+      <div class="g ph p-zebra reveal"><span>Yatak odası · Zebra</span></div>
+      <div class="g ph tall p-jaluzi reveal"><span>Çalışma odası · Ahşap jaluzi</span></div>
+      <div class="g ph p-stor reveal"><span>Mutfak · Stor</span></div>
+      <div class="g ph p-duvar reveal"><span>Duvar kağıdı</span></div>
+      <div class="g ph wide p-motor reveal"><span>Motorlu perde · Akıllı ev</span></div>
+    </div>
+    <div class="insta"><a class="btn btn-line" href="https://www.instagram.com/mnzperde/" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg> @mnzperde'yi takip edin</a></div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" style="padding:5rem 0">
+  <div class="wrap">
+    <div class="rev glass sheen reveal">
+      <div class="score">5,0</div>
+      <div><span class="stars" style="font-size:1.3rem">★★★★★</span><h2>Müşterilerimiz Google'da tam puan veriyor</h2><p>Bizi en iyi, perdelerini yaptığımız komşularımız anlatıyor. Tüm yorumları Google'da okuyabilirsiniz.</p></div>
+      <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&query=MNZ+Perde+Erdem+Cd+167+Buca+%C4%B0zmir" target="_blank" rel="noopener">Yorumları oku <svg><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="iletisim">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="eyebrow">İletişim</span>
+      <h2 style="font-size:clamp(2rem,3.8vw,3rem);margin-top:.8rem">Pencerelerinizi ölçmeye gelelim</h2>
+      <p style="color:var(--ink-2);margin-top:1rem">Formu doldurun, talebiniz WhatsApp üzerinden doğrudan bize ulaşsın. Ya da mağazamıza uğrayın, kartelalarımızı birlikte inceleyelim.</p>
+      <ul class="info-list">
+        <li><span class="ic"><svg><use href="#i-pin"/></svg></span><div><small>Adres</small><b>Menderes Mah., Erdem Cd. No:167/A<br>35370 Buca / İzmir</b><br><a href="https://www.google.com/maps/dir/?api=1&destination=MNZ+Perde+Erdem+Cd+167+Buca+%C4%B0zmir" target="_blank" rel="noopener" style="color:var(--brass);font-weight:600;font-size:.9rem">Yol tarifi al →</a></div></li>
+        <li><span class="ic"><svg><use href="#i-phone"/></svg></span><div><small>Telefon &amp; WhatsApp</small><a href="tel:+905423066604"><b>0542 306 66 04</b></a></div></li>
+        <li><span class="ic"><svg><use href="#i-clock"/></svg></span><div><small>Çalışma saatleri</small><b>Kapanış: 20:30</b></div></li>
+        <li><span class="ic"><svg><use href="#i-ig"/></svg></span><div><small>Instagram</small><a href="https://www.instagram.com/mnzperde/" target="_blank" rel="noopener"><b>@mnzperde</b></a></div></li>
+      </ul>
+    </div>
+    <form id="form" class="glass reveal" novalidate>
+      <h3>Ölçü randevusu</h3>
+      <p>Bilgilerinizi bırakın, size en kısa sürede dönelim.</p>
+      <div class="row">
+        <label>Adınız soyadınız<input id="f-name" autocomplete="name" placeholder="Ad Soyad"></label>
+        <label>Telefon<input id="f-phone" type="tel" autocomplete="tel" placeholder="05xx xxx xx xx"></label>
+      </div>
+      <div class="row">
+        <label>Semt / ilçe<input id="f-area" placeholder="Örn. Buca, Bornova, Karşıyaka"></label>
+        <label>İlgilendiğiniz ürün
+          <select id="f-type">
+            <option>Henüz karar vermedim</option><option>Tül &amp; fon perde</option><option>Stor perde</option><option>Zebra perde</option><option>Plise perde (cam balkon)</option><option>Ahşap jaluzi</option><option>Motorlu / akıllı perde</option><option>Duvar kağıdı</option><option>Döşemelik kumaş</option><option>İç mimari proje</option>
+          </select>
+        </label>
+      </div>
+      <div class="row">
+        <label>Pencere sayısı<select id="f-count"><option>1</option><option>2–3</option><option>4–6</option><option>7+</option><option>Tüm ev</option></select></label>
+        <label>Size uygun zaman<select id="f-time"><option>Fark etmez</option><option>Hafta içi sabah</option><option>Hafta içi öğleden sonra</option><option>Akşam</option><option>Cumartesi</option></select></label>
+      </div>
+      <label>Notunuz<textarea id="f-note" placeholder="Örn. salon için tül ve blackout fon, cam balkon için plise"></textarea></label>
+      <div class="form-actions">
+        <button class="btn btn-wa" type="submit"><svg><use href="#i-wa"/></svg> WhatsApp ile gönder</button>
+        <span class="form-hint" id="hint">Mesajınız WhatsApp'ta hazır olarak açılır.</span>
+      </div>
+      <a id="wa-out" href="#" target="_blank" rel="noopener" style="display:none;margin-top:1rem;font-weight:700;color:#1F8F55">WhatsApp açılmadıysa buraya dokunun →</a>
+    </form>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-sec" style="padding-top:5.5rem">
+  <div class="wrap">
+    <div class="sec-head reveal" style="justify-content:center;text-align:center"><div><span class="eyebrow">Sık sorulanlar</span><h2>Aklınızdaki sorular</h2></div></div>
+    <div class="faq glass">
+      <details class="reveal"><summary>Ölçüyü kendim alıp gönderebilir miyim?</summary><p>Gönderebilirsiniz, ama özel ölçü sistemlerde (plise, zebra, stor) birkaç milimetrelik hata perdenin çalışmasını etkiler. Bu yüzden ölçüyü yerinde bizim almamızı öneriyoruz; böylece ölçünün sorumluluğu da bizde olur.</p></details>
+      <details class="reveal"><summary>Zebra, stor ve plise arasındaki fark nedir?</summary><p>Stor tek parça kumaştır, aşağı-yukarı sarılır. Zebra, dolu ve tül şeritlerin üst üste kaymasıyla ışığı ayarlar. Plise akordeon gibi katlanır ve hem aşağıdan hem yukarıdan açılabildiği için cam balkonlarda en çok tercih edilen sistemdir.</p></details>
+      <details class="reveal"><summary>Plise perdede gerçekten aynı gün montaj yapıyor musunuz?</summary><p>Evet. Özel ölçü plise perdelerde sabah alınan ölçülerin imalatını ve montajını aynı gün akşam tamamlıyoruz. Yoğunluğa göre tarihi randevuda netleştiriyoruz.</p></details>
+      <details class="reveal"><summary>Mevcut perdemi motorlu hale getirebilir misiniz?</summary><p>Birçok stor ve zebra sistemi motorlu hale getirilebilir, ancak bu pencerenin yapısına ve elektrik bağlantısına bağlıdır. Keşifte yerinde bakıp en doğru çözümü öneriyoruz.</p></details>
+      <details class="reveal"><summary>Sadece Buca'ya mı hizmet veriyorsunuz?</summary><p>Mağazamız Buca'da. Ölçü ve montaj için İzmir'in diğer ilçelerine de geliyoruz; bölgenizi formda belirtmeniz yeterli.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="#top" class="logo"><span class="logo-mark"><svg width="20" height="20" viewBox="0 0 20 20"><g fill="#F5F0E8"><rect x="2" y="2" width="16" height="2" rx="1"/><rect x="3" y="6" width="14" height="2" opacity=".8"/><rect x="3" y="10" width="14" height="2" opacity=".6"/><rect x="3" y="14" width="14" height="2" opacity=".4"/></g></svg></span><span>MNZ PERDE<small style="color:rgba(245,240,232,.5)">BUCA · İZMİR</small></span></a>
+        <p style="margin-top:1rem;max-width:22rem">Perde, jaluzi, duvar kağıdı, döşemelik kumaş, iç mimari ve akıllı ev sistemleri.</p>
+      </div>
+      <nav><a href="#urunler">Ürünler</a><a href="#dene">Perdenizi Deneyin</a><a href="#surec">Süreç</a><a href="#ic-mimari">İç Mimari</a><a href="#iletisim">İletişim</a></nav>
+    </div>
+    <div class="copy"><span>© <span id="yr"></span> MNZ Perde · Menderes Mah., Erdem Cd. No:167/A, Buca / İzmir</span><span>0542 306 66 04</span></div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/905423066604?text=Merhaba%20MNZ%20Perde%2C%20perde%20i%C3%A7in%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" aria-label="WhatsApp ile yazın"><svg><use href="#i-wa"/></svg></a>
+
+<script>
+
+/* dalgalanan beyaz tül */
+(function(){
+  const cv=document.getElementById('sheer'),ctx=cv.getContext('2d');
+  const still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let W,H,dpr;
+  function size(){dpr=Math.min(window.devicePixelRatio||1,1.5);W=innerWidth;H=innerHeight;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0)}
+  function edge(x0,i,t){const pts=[];for(let y=-10;y<=H+20;y+=18){const k=Math.pow(Math.max(y,0)/H,.9);
+    const x=x0+Math.sin(y*.0042+t*.00055+i*.9)*26*k+Math.sin(y*.011-t*.0009+i*1.7)*7*k+Math.sin(t*.0003+i)*10*k;pts.push([x,y])}return pts}
+  function frame(t){
+    ctx.clearRect(0,0,W,H);
+    const fw=W<700?34:46,n=Math.ceil(W/fw)+4;
+    let left=edge(-2*fw,0,t);
+    for(let i=0;i<n;i++){
+      const x0=(i-2)*fw,right=edge(x0+fw,i+1,t);
+      const g=ctx.createLinearGradient(x0,0,x0+fw,0);
+      g.addColorStop(0,'rgba(205,192,172,.16)');g.addColorStop(.35,'rgba(255,255,255,.70)');
+      g.addColorStop(.55,'rgba(255,255,255,.88)');g.addColorStop(1,'rgba(215,203,185,.22)');
+      ctx.beginPath();ctx.moveTo(left[0][0],left[0][1]);
+      for(const p of left)ctx.lineTo(p[0],p[1]);
+      for(let j=right.length-1;j>=0;j--)ctx.lineTo(right[j][0],right[j][1]);
+      ctx.closePath();ctx.fillStyle=g;ctx.fill();
+      left=right;
+    }
+    const v=ctx.createLinearGradient(0,0,0,H);v.addColorStop(0,'rgba(251,248,243,.0)');v.addColorStop(1,'rgba(244,237,226,.35)');
+    ctx.fillStyle=v;ctx.fillRect(0,0,W,H);
+    if(!still)requestAnimationFrame(frame);
+  }
+  size();addEventListener('resize',size);requestAnimationFrame(frame);
+})();
+
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+/* reveal on scroll */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open')));
+
+/* simulator */
+const C={krem:['#E8DCC8','#CDBEA6'],gri:['#8E8A85','#6F6B66'],antrasit:['#3C3936','#2A2725'],ceviz:['#8B5E37','#6E4527']};
+const T={
+  zebra:(a,b)=>`repeating-linear-gradient(180deg,${a} 0 20px,${hex(a,.28)} 20px 34px)`,
+  stor:(a,b)=>`linear-gradient(180deg,${a},${b})`,
+  plise:(a,b)=>`repeating-linear-gradient(180deg,${a} 0 5px,${b} 5px 7px,${a} 7px 10px)`,
+  jaluzi:(a,b)=>`repeating-linear-gradient(180deg,${a} 0 12px,${b} 12px 14px,rgba(255,255,255,.0) 14px 18px)`
+};
+const D={
+  zebra:'Zebra: şeritleri kaydırarak ışığı ayarlarsınız; kapalıyken bile dışarıyla bağı koparmaz.',
+  stor:'Stor: sade ve tek parça. Blackout kumaşla tam karartma da mümkün.',
+  plise:'Plise: cam balkonların vazgeçilmezi. Aşağıdan ve yukarıdan açılabilir.',
+  jaluzi:'Ahşap jaluzi: lamelleri çevirerek ışığın yönünü bile kontrol edersiniz.'
+};
+function hex(h,a){const n=parseInt(h.slice(1),16);return `rgba(${n>>16},${(n>>8)&255},${n&255},${a})`}
+let st={t:'zebra',c:'krem'};
+const blind=document.getElementById('blind'),rng=document.getElementById('height'),txt=document.getElementById('simText');
+function draw(){const [a,b]=C[st.c];blind.style.background=T[st.t](a,b);blind.style.setProperty('--bar',b);blind.style.height=rng.value+'%';txt.textContent=D[st.t]}
+document.querySelectorAll('#types .chip').forEach(b=>b.onclick=()=>{document.querySelectorAll('#types .chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');st.t=b.dataset.t;draw()});
+document.querySelectorAll('#colors .color').forEach(b=>b.onclick=()=>{document.querySelectorAll('#colors .color').forEach(x=>x.classList.remove('on'));b.classList.add('on');st.c=b.dataset.c;draw()});
+rng.oninput=draw;draw();
+
+/* form -> WhatsApp */
+document.getElementById('form').addEventListener('submit',e=>{
+  e.preventDefault();
+  const v=id=>document.getElementById(id).value.trim();
+  const hint=document.getElementById('hint');
+  if(!v('f-name')||!v('f-phone')){hint.textContent='Lütfen adınızı ve telefonunuzu yazın.';hint.classList.add('err');return}
+  hint.classList.remove('err');
+  const msg=`Merhaba MNZ Perde, ölçü randevusu almak istiyorum.
+Ad Soyad: ${v('f-name')}
+Telefon: ${v('f-phone')}
+Semt: ${v('f-area')||'-'}
+Ürün: ${v('f-type')}
+Pencere sayısı: ${v('f-count')}
+Uygun zaman: ${v('f-time')}
+Not: ${v('f-note')||'-'}`;
+  const url='https://wa.me/905423066604?text='+encodeURIComponent(msg);
+  const out=document.getElementById('wa-out');out.href=url;out.style.display='inline-block';
+  hint.textContent='Mesajınız hazır. WhatsApp açılıyor…';
+  try{const w=window.open(url,'_blank');if(!w)throw 0}catch(_){hint.textContent='Mesajınız hazır. Aşağıdaki bağlantıya dokunun.'}
+});
+</script>
+</body>
+</html>
