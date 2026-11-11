@@ -107,6 +107,23 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.45);backdro
 .badge .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#1F8F55;margin-right:6px}
 @media(max-width:920px){.hero-grid{grid-template-columns:1fr;gap:3.5rem;padding:3.5rem 0 4.5rem}.window{max-width:380px;margin-inline:auto}.badge.b1{left:-8px}.badge.b2{right:-8px}}
 
+
+/* HERO VIDEO */
+.hero{min-height:min(92vh,860px);display:flex;align-items:center}
+.hero > .wrap{width:min(1180px,92vw)}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-shade{position:absolute;inset:0;z-index:0;background:
+  linear-gradient(90deg,rgba(251,248,243,.94) 0%,rgba(251,248,243,.82) 38%,rgba(251,248,243,.25) 68%,rgba(251,248,243,.05) 100%),
+  linear-gradient(180deg,rgba(251,248,243,0) 70%,rgba(251,248,243,.9) 100%)}
+.hero-side{position:relative;display:flex;flex-direction:column;align-items:flex-end;gap:1rem}
+.quick{width:min(360px,100%);border-radius:22px;padding:1.8rem}
+.quick h3{font-size:1.6rem;margin:.6rem 0 1.1rem}
+.quick ul{list-style:none;display:grid;gap:.7rem;margin-bottom:1.4rem}
+.quick li{display:flex;justify-content:space-between;gap:1rem;font-size:.9rem;padding-bottom:.7rem;border-bottom:1px solid rgba(30,28,26,.1)}
+.quick li span{color:var(--ink-2)}
+.hero-side .badge{position:static}
+@media(max-width:920px){.hero-shade{background:linear-gradient(180deg,rgba(251,248,243,.9) 0%,rgba(251,248,243,.78) 55%,rgba(251,248,243,.92) 100%)}.hero-side{align-items:stretch}.quick{width:100%}.hero-side .badge{display:none}}
+
 /* MARQUEE */
 .strip{background:var(--ink);color:var(--linen);overflow:hidden;padding:1.1rem 0;white-space:nowrap}
 .strip-track{display:inline-flex;gap:3rem;animation:mq 30s linear infinite;font-family:var(--serif);font-size:1.25rem;font-style:italic}
@@ -316,7 +333,8 @@ footer{background:var(--ink);color:rgba(245,240,232,.7);padding:3.5rem 0 2rem;fo
 <main id="top">
 <!-- HERO -->
 <section class="hero" style="padding:0">
-  <div class="fg glass fg1"></div><div class="fg glass fg2"></div><div class="fg glass fg3"></div>
+  <video class="hero-video" id="heroVideo" muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg" aria-hidden="true"></video>
+  <div class="hero-shade" aria-hidden="true"></div>
   <div class="wrap hero-grid">
     <div>
       <span class="eyebrow">Perde · Jaluzi · Akıllı Ev · İç Mimari</span>
@@ -332,13 +350,17 @@ footer{background:var(--ink);color:rgba(245,240,232,.7);padding:3.5rem 0 2rem;fo
         <div><strong>Aynı gün</strong><span>Plise perdede montaj</span></div>
       </div>
     </div>
-    <div style="position:relative;padding:30px 40px 30px">
-      <div class="window">
-        <div class="rod"></div>
-        <div class="drape l"></div><div class="drape r"></div>
-        <div class="pane"><div class="hero-blind"></div><div class="mullion"></div></div>
+    <div class="hero-side">
+      <div class="quick glass">
+        <span class="eyebrow">Hızlı randevu</span>
+        <h3>Pencerelerinizi ölçmeye gelelim</h3>
+        <ul>
+          <li><b>Ölçü</b><span>Evinizde, yerinde</span></li>
+          <li><b>Tasarım</b><span>Kartelalardan birlikte seçim</span></li>
+          <li><b>Montaj</b><span>Plise perdede aynı gün</span></li>
+        </ul>
+        <a class="btn btn-dark" href="tel:+905423066604" style="width:100%;justify-content:center"><svg><use href="#i-phone"/></svg> 0542 306 66 04</a>
       </div>
-      <div class="badge glass b1"><strong>Özel ölçü imalat</strong>Her pencereye milimetrik</div>
       <div class="badge glass b2"><span class="dot"></span><b>Buca mağaza</b><br><span style="color:var(--muted)">Kapanış 20:30</span></div>
     </div>
   </div>
@@ -608,6 +630,14 @@ footer{background:var(--ink);color:rgba(245,240,232,.7);padding:3.5rem 0 2rem;fo
     document.getElementById('ig-wrap').hidden=false;
     document.querySelector('#galeri .gallery').style.display='none';
   }).catch(()=>{});
+})();
+
+
+/* hero arka plan videosu */
+(function(){const v=document.getElementById('heroVideo');if(!v)return;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  v.src=innerWidth<820?'assets/hero-mobile.mp4':'assets/hero.mp4';
+  const p=v.play();if(p&&p.catch)p.catch(()=>{});
 })();
 
 document.getElementById('yr').textContent=new Date().getFullYear();
