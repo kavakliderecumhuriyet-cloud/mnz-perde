@@ -125,6 +125,21 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.45);backdro
 .hero-side .badge{position:static}
 @media(max-width:920px){.hero-shade{background:linear-gradient(180deg,rgba(251,248,243,.9) 0%,rgba(251,248,243,.78) 55%,rgba(251,248,243,.92) 100%)}.hero-side{align-items:stretch}.quick{width:100%}.hero-side .badge{display:none}}
 
+
+/* KARŞILAMA (4 sn) */
+.intro{position:fixed;inset:0;z-index:120;display:flex;align-items:center;justify-content:center;padding:3vh 4vw;
+  background:radial-gradient(circle at 50% 40%,rgba(255,255,255,.78),rgba(245,240,232,.86));backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);
+  opacity:0;transition:opacity .5s ease}
+.intro.show{opacity:1}
+.intro img{max-height:88vh;max-width:min(92vw,620px);width:auto;height:auto;filter:drop-shadow(0 30px 40px rgba(60,40,20,.28));transform:translateY(24px) scale(.97);transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.intro.show img{transform:none}
+.intro-skip{position:absolute;top:18px;right:18px;border:1px solid rgba(255,255,255,.9);background:rgba(255,255,255,.7);backdrop-filter:blur(10px);border-radius:999px;padding:.6rem 1.1rem;font:inherit;font-weight:700;font-size:.85rem;cursor:pointer;color:var(--ink)}
+.intro-skip:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+.intro-bar{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);width:min(240px,50vw);height:4px;border-radius:4px;background:rgba(30,28,26,.12);overflow:hidden}
+.intro-bar span{display:block;height:100%;width:0;background:var(--brass)}
+.intro.show .intro-bar span{width:100%;transition:width 4s linear}
+@media(prefers-reduced-motion:reduce){.intro,.intro img{transition:none}.intro.show .intro-bar span{transition:none}}
+
 /* MARQUEE */
 .strip{background:var(--ink);color:var(--linen);overflow:hidden;padding:1.1rem 0;white-space:nowrap}
 .strip-track{display:inline-flex;gap:3rem;animation:mq 30s linear infinite;font-family:var(--serif);font-size:1.25rem;font-style:italic}
@@ -310,6 +325,11 @@ footer{background:var(--ink);color:rgba(245,240,232,.7);padding:3.5rem 0 2rem;fo
   <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 </svg>
 
+<div class="intro" id="intro" role="dialog" aria-modal="true" aria-label="MNZ Perde'ye hoş geldiniz">
+  <img src="assets/hosgeldiniz.webp" width="842" height="1300" alt="MNZ Perde: MNZ Perde'ye hoş geldiniz! Size en iyi perde seçiminde yardımcı olacağım." decoding="async" fetchpriority="high">
+  <button type="button" class="intro-skip" id="introSkip">Geç ×</button>
+  <div class="intro-bar" aria-hidden="true"><span></span></div>
+</div>
 <header>
   <div class="wrap nav">
     <a href="#top" class="logo">
@@ -586,6 +606,19 @@ footer{background:var(--ink);color:rgba(245,240,232,.7);padding:3.5rem 0 2rem;fo
 
 <script src="assets/consent.js"></script>
 <script>
+
+/* karşılama görseli: 4 saniye */
+(function(){const el=document.getElementById('intro');if(!el)return;
+  let done=false;const prev=document.activeElement;
+  function close(){if(done)return;done=true;el.classList.remove('show');setTimeout(()=>{el.remove();if(prev&&prev.focus)prev.focus()},500);document.removeEventListener('keydown',key)}
+  function key(e){if(e.key==='Escape')close()}
+  requestAnimationFrame(()=>requestAnimationFrame(()=>el.classList.add('show')));
+  document.getElementById('introSkip').addEventListener('click',close);
+  el.addEventListener('click',e=>{if(e.target===el||e.target.tagName==='IMG')close()});
+  document.addEventListener('keydown',key);
+  try{document.getElementById('introSkip').focus({preventScroll:true})}catch(_){}
+  setTimeout(close,4000);
+})();
 
 /* dalgalanan beyaz tül */
 (function(){
