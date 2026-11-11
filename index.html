@@ -197,6 +197,24 @@ input[type=range]{width:100%;accent-color:var(--brass)}
 .g.tall{grid-row:span 2}.g.wide{grid-column:span 2}
 .g.ph::before{content:"Fotoğraf eklenecek";position:absolute;top:12px;right:12px;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(30,28,26,.55);background:rgba(255,255,255,.6);padding:.2rem .5rem;border-radius:4px}
 @media(max-width:860px){.gallery{grid-template-columns:repeat(2,1fr)}.g.wide{grid-column:span 2}}
+
+/* INSTAGRAM FEED */
+.ig-head{display:flex;align-items:center;gap:.9rem;margin-bottom:1.6rem}
+.ig-head img{width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid #fff;box-shadow:0 0 0 2px var(--brass)}
+.ig-head b{display:block;font-size:1.05rem}
+.ig-head span{font-size:.85rem;color:var(--muted)}
+.ig-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem}
+.ig{position:relative;display:block;aspect-ratio:9/16;border-radius:var(--r);overflow:hidden;background:var(--linen-2);box-shadow:0 20px 40px -26px rgba(60,40,20,.5);transition:transform .3s}
+.ig:hover{transform:translateY(-6px)}
+.ig img,.ig video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ig video{opacity:0;transition:opacity .4s}
+.ig.playing video{opacity:1}
+.ig .meta{position:absolute;left:8px;right:8px;bottom:8px;z-index:2;padding:.6rem .7rem;border-radius:12px;font-size:.74rem;line-height:1.35;color:var(--ink)}
+.ig .meta small{display:block;color:var(--muted);margin-top:2px}
+.ig .play{position:absolute;top:10px;right:10px;z-index:2;width:30px;height:30px;border-radius:50%;display:grid;place-items:center}
+.ig .play svg{width:12px;height:12px}
+@media(max-width:1000px){.ig-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.ig-grid{grid-template-columns:repeat(2,1fr)}.ig .meta{font-size:.7rem}}
 .insta{display:flex;justify-content:center;margin-top:2.4rem}
 
 /* REVIEWS */
@@ -427,7 +445,11 @@ footer{background:var(--ink);color:rgba(245,240,232,.7);padding:3.5rem 0 2rem;fo
   <div class="wrap">
     <div class="sec-head reveal">
       <div><span class="eyebrow">Uygulamalarımız</span><h2>İzmir'deki evlerden</h2></div>
-      <p>Tamamladığımız işlerin fotoğraflarını Instagram hesabımızda düzenli paylaşıyoruz.</p>
+      <p>Instagram'da paylaştığımız son işlerimiz burada otomatik olarak görünür. İzlemek için üzerine gelin ya da dokunun.</p>
+    </div>
+    <div id="ig-wrap" hidden>
+      <div class="ig-head"><img id="ig-avatar" alt="" onerror="this.style.display='none'"><div><b>@mnzperde</b><span id="ig-stats">Instagram'dan son paylaşımlar</span></div></div>
+      <div class="ig-grid" id="ig-grid"></div>
     </div>
     <div class="gallery">
       <div class="g ph tall p-fon reveal"><span>Salon · Fon &amp; tül</span></div>
@@ -556,6 +578,33 @@ footer{background:var(--ink);color:rgba(245,240,232,.7);padding:3.5rem 0 2rem;fo
     if(!still)requestAnimationFrame(frame);
   }
   size();addEventListener('resize',size);requestAnimationFrame(frame);
+})();
+
+
+/* Instagram akışı (Behold) */
+(function(){
+  const FEED='https://feeds.behold.so/BggNkdbDCQ99iHTlolMB';
+  const esc=t=>(t||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const tarih=d=>{try{return new Date(d).toLocaleDateString('tr-TR',{day:'numeric',month:'long'})}catch(_){return''}};
+  fetch(FEED).then(r=>{if(!r.ok)throw 0;return r.json()}).then(j=>{
+    const posts=(j.posts||[]).filter(p=>p.sizes&&p.sizes.medium).slice(0,6);
+    if(!posts.length)return;
+    if(j.profilePictureUrl)document.getElementById('ig-avatar').src=j.profilePictureUrl;
+    if(j.followersCount)document.getElementById('ig-stats').textContent=j.followersCount.toLocaleString('tr-TR')+' takipçi · son paylaşımlar';
+    const g=document.getElementById('ig-grid');
+    g.innerHTML=posts.map(p=>{
+      const cap=esc((p.prunedCaption||p.caption||'').split('\n')[0].slice(0,70));
+      const vid=p.mediaType==='VIDEO'&&p.mediaUrl?`<video muted loop playsinline preload="none" src="${esc(p.mediaUrl)}"></video><span class="play glass"><svg viewBox="0 0 12 12"><path d="M3 1.5v9l7-4.5z" fill="#1E1C1A"/></svg></span>`:'';
+      return `<a class="ig sheen" href="${esc(p.permalink)}" target="_blank" rel="noopener"><img loading="lazy" src="${esc(p.sizes.medium.mediaUrl)}" alt="${cap||'MNZ Perde Instagram paylaşımı'}">${vid}<span class="meta glass">${cap||'Instagram\'da izle'}<small>${tarih(p.timestamp)}</small></span></a>`;
+    }).join('');
+    g.querySelectorAll('.ig').forEach(a=>{const v=a.querySelector('video');if(!v)return;
+      const on=()=>{v.play().then(()=>a.classList.add('playing')).catch(()=>{})},off=()=>{v.pause();a.classList.remove('playing')};
+      a.addEventListener('mouseenter',on);a.addEventListener('mouseleave',off);
+      if(matchMedia('(hover:none)').matches&&'IntersectionObserver' in window){new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.intersectionRatio>.7?on():off()),{threshold:[0,.7,1]}).observe(a)}
+    });
+    document.getElementById('ig-wrap').hidden=false;
+    document.querySelector('#galeri .gallery').style.display='none';
+  }).catch(()=>{});
 })();
 
 document.getElementById('yr').textContent=new Date().getFullYear();
