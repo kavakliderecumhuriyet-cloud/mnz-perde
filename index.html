@@ -5,9 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MNZ Perde | Buca İzmir – Özel Ölçü Perde, Jaluzi ve Akıllı Ev</title>
 <meta name="description" content="MNZ Perde, Buca İzmir: özel ölçü tül ve fon perde, stor, zebra, plise, ahşap jaluzi, motorlu perde, duvar kağıdı ve döşemelik kumaş. Ölçü, tasarım, imalat ve montaj tek elden.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/fraunces-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/manrope-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/consent.css">
 <style>
 :root{
   --linen:#F5F0E8; --linen-2:#EDE5D8; --paper:#FBF8F3;
@@ -378,6 +379,11 @@ footer{background:var(--ink);color:rgba(245,240,232,.7);padding:3.5rem 0 2rem;fo
       <div><span class="eyebrow">Uygulamalarımız</span><h2>İzmir'deki evlerden</h2></div>
       <p>Instagram'da paylaştığımız son işlerimiz burada otomatik olarak görünür. İzlemek için üzerine gelin ya da dokunun.</p>
     </div>
+    <div id="ig-consent" class="cc-embed glass">
+      <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" style="color:#1E1C1A"><use href="#i-ig"/></svg></div>
+      <div><b>Instagram paylaşımlarımız</b><p>Son işlerimizi gösteren bu bölüm Behold ve Instagram (Meta) sunucularından yüklenir. Görüntülediğinizde IP adresiniz ve tarayıcı bilgileriniz bu sağlayıcılara iletilir. Bu nedenle yalnızca izninizle yüklenir. <a href="cerez-politikasi.html" style="color:#8A5D2B;font-weight:700">Ayrıntılar</a></p></div>
+      <div class="cc-embed-actions"><button type="button" class="btn btn-dark" id="ig-allow">İçeriği göster</button><a class="btn btn-line" href="https://www.instagram.com/mnzperde/" target="_blank" rel="noopener">Instagram'da aç</a></div>
+    </div>
     <div id="ig-wrap" hidden>
       <div class="ig-head"><img id="ig-avatar" alt="" onerror="this.style.display='none'"><div><b>@mnzperde</b><span id="ig-stats">Instagram'dan son paylaşımlar</span></div></div>
       <div class="ig-grid" id="ig-grid"></div>
@@ -534,6 +540,11 @@ footer{background:var(--ink);color:rgba(245,240,232,.7);padding:3.5rem 0 2rem;fo
         <label>Size uygun zaman<select id="f-time"><option>Fark etmez</option><option>Hafta içi sabah</option><option>Hafta içi öğleden sonra</option><option>Akşam</option><option>Cumartesi</option></select></label>
       </div>
       <label>Notunuz<textarea id="f-note" placeholder="Örn. salon için tül ve blackout fon, cam balkon için plise"></textarea></label>
+      <label class="kvkk-check" style="display:flex;gap:.7rem;align-items:flex-start;font-weight:500;font-size:.8rem;line-height:1.5;color:var(--ink-2)">
+        <input type="checkbox" id="f-kvkk" style="width:20px;height:20px;margin:.1rem 0 0;flex:none;accent-color:var(--brass)" aria-describedby="kvkk-note">
+        <span><a href="kvkk-aydinlatma-metni.html" target="_blank" rel="noopener" style="color:var(--brass-d);font-weight:700;text-decoration:underline">KVKK Aydınlatma Metni</a>'ni okudum. Bilgilerimin ölçü randevusu talebim için WhatsApp üzerinden MNZ Perde'ye iletileceğini anlıyorum.</span>
+      </label>
+      <p id="kvkk-note" style="font-size:.75rem;color:var(--muted);margin:-.3rem 0 1rem">Bu form verilerinizi sitemizde kaydetmez. “WhatsApp ile gönder” dediğinizde mesaj kendi WhatsApp uygulamanızda hazırlanır ve yalnızca siz gönderdiğinizde bize ulaşır.</p>
       <div class="form-actions">
         <button class="btn btn-wa" type="submit"><svg><use href="#i-wa"/></svg> WhatsApp ile gönder</button>
         <span class="form-hint" id="hint">Mesajınız WhatsApp'ta hazır olarak açılır.</span>
@@ -565,7 +576,7 @@ footer{background:var(--ink);color:rgba(245,240,232,.7);padding:3.5rem 0 2rem;fo
         <a href="#top" class="logo"><span class="logo-mark"><svg width="20" height="20" viewBox="0 0 20 20"><g fill="#F5F0E8"><rect x="2" y="2" width="16" height="2" rx="1"/><rect x="3" y="6" width="14" height="2" opacity=".8"/><rect x="3" y="10" width="14" height="2" opacity=".6"/><rect x="3" y="14" width="14" height="2" opacity=".4"/></g></svg></span><span>MNZ PERDE<small style="color:rgba(245,240,232,.5)">BUCA · İZMİR</small></span></a>
         <p style="margin-top:1rem;max-width:22rem">Perde, jaluzi, duvar kağıdı, döşemelik kumaş, iç mimari ve akıllı ev sistemleri.</p>
       </div>
-      <nav><a href="#urunler">Ürünler</a><a href="#dene">Perdenizi Deneyin</a><a href="#surec">Süreç</a><a href="#ic-mimari">İç Mimari</a><a href="#iletisim">İletişim</a></nav>
+      <nav><a href="cerez-politikasi.html">Çerez Politikası</a><a href="kvkk-aydinlatma-metni.html">KVKK Aydınlatma Metni</a><a href="#" data-cc-open role="button">Çerez Tercihleri</a><a href="#urunler">Ürünler</a><a href="#dene">Perdenizi Deneyin</a><a href="#surec">Süreç</a><a href="#ic-mimari">İç Mimari</a><a href="#iletisim">İletişim</a></nav>
     </div>
     <div class="copy"><span>© <span id="yr"></span> MNZ Perde · Menderes Mah., Erdem Cd. No:167/A, Buca / İzmir</span><span>0542 306 66 04</span></div>
   </div>
@@ -573,6 +584,7 @@ footer{background:var(--ink);color:rgba(245,240,232,.7);padding:3.5rem 0 2rem;fo
 
 <a class="wa-float" href="https://wa.me/905423066604?text=Merhaba%20MNZ%20Perde%2C%20perde%20i%C3%A7in%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" aria-label="WhatsApp ile yazın"><svg><use href="#i-wa"/></svg></a>
 
+<script src="assets/consent.js"></script>
 <script>
 
 /* dalgalanan beyaz tül */
@@ -606,8 +618,8 @@ footer{background:var(--ink);color:rgba(245,240,232,.7);padding:3.5rem 0 2rem;fo
 })();
 
 
-/* Instagram akışı (Behold) */
-(function(){
+/* Instagram akışı (Behold) – yalnızca 'İşlevsel' izni ile yüklenir */
+function loadInstagram(){
   const FEED='https://feeds.behold.so/BggNkdbDCQ99iHTlolMB';
   const esc=t=>(t||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   const tarih=d=>{try{return new Date(d).toLocaleDateString('tr-TR',{day:'numeric',month:'long'})}catch(_){return''}};
@@ -630,7 +642,9 @@ footer{background:var(--ink);color:rgba(245,240,232,.7);padding:3.5rem 0 2rem;fo
     document.getElementById('ig-wrap').hidden=false;
     document.querySelector('#galeri .gallery').style.display='none';
   }).catch(()=>{});
-})();
+}
+document.getElementById('ig-allow').addEventListener('click',()=>window.MNZConsent&&MNZConsent.grant('functional'));
+if(window.MNZConsent){MNZConsent.whenGranted('functional',()=>{const c=document.getElementById('ig-consent');if(c)c.style.display='none';loadInstagram();});}
 
 
 /* hero arka plan videosu */
@@ -675,6 +689,7 @@ document.getElementById('form').addEventListener('submit',e=>{
   const v=id=>document.getElementById(id).value.trim();
   const hint=document.getElementById('hint');
   if(!v('f-name')||!v('f-phone')){hint.textContent='Lütfen adınızı ve telefonunuzu yazın.';hint.classList.add('err');return}
+  if(!document.getElementById('f-kvkk').checked){hint.textContent='Devam etmek için KVKK Aydınlatma Metni\'ni okuduğunuzu onaylayın.';hint.classList.add('err');document.getElementById('f-kvkk').focus();return}
   hint.classList.remove('err');
   const msg=`Merhaba MNZ Perde, ölçü randevusu almak istiyorum.
 Ad Soyad: ${v('f-name')}

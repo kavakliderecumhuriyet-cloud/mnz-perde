@@ -1,0 +1,76 @@
+/* MNZ Perde – Çerez yönetimi (bağımlılıksız) */
+.cc-hidden{display:none!important}
+.cc-banner{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:90;width:min(980px,calc(100vw - 24px));
+  background:linear-gradient(135deg,rgba(255,255,255,.9),rgba(251,248,243,.82));backdrop-filter:blur(18px) saturate(150%);-webkit-backdrop-filter:blur(18px) saturate(150%);
+  border:1px solid rgba(255,255,255,.85);border-radius:22px;box-shadow:0 24px 60px -24px rgba(50,35,20,.45),inset 0 1px 0 #fff;
+  padding:1.4rem 1.6rem;display:grid;grid-template-columns:1fr auto;gap:1.2rem 2rem;align-items:center;
+  font-family:"Manrope",system-ui,sans-serif;color:#1E1C1A;animation:cc-in .45s ease}
+@keyframes cc-in{from{opacity:0;transform:translate(-50%,16px)}to{opacity:1;transform:translate(-50%,0)}}
+.cc-banner h2{font-family:"Fraunces",Georgia,serif;font-weight:500;font-size:1.25rem;line-height:1.2;margin:0 0 .4rem}
+.cc-banner p{margin:0;font-size:.88rem;line-height:1.55;color:#4A4540;max-width:40rem}
+.cc-links{margin-top:.55rem;font-size:.8rem;display:flex;gap:1rem;flex-wrap:wrap}
+.cc-links a{color:#8A5D2B;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.cc-actions{display:grid;grid-template-columns:repeat(3,auto);gap:.55rem}
+.cc-btn{font:inherit;font-size:.86rem;font-weight:700;cursor:pointer;border-radius:999px;padding:.78rem 1.15rem;min-height:44px;
+  border:1.5px solid #1E1C1A;background:#1E1C1A;color:#F5F0E8;transition:transform .15s,background .15s;white-space:nowrap}
+.cc-btn:hover{transform:translateY(-1px);background:#3A3633}
+.cc-btn:focus-visible,.cc-switch input:focus-visible+span,.cc-close:focus-visible,.cc-links a:focus-visible,.cc-details summary:focus-visible{outline:3px solid #A8743A;outline-offset:3px}
+body.cc-open .wa-float{bottom:calc(var(--cc-h,140px) + 28px)}
+@media(max-width:860px){
+  .cc-banner{grid-template-columns:1fr;padding:1.15rem 1.15rem 1.2rem;bottom:10px;gap:.9rem}
+  .cc-banner h2{font-size:1.1rem}.cc-banner p{font-size:.83rem}
+  .cc-actions{grid-template-columns:1fr 1fr}
+  .cc-actions .cc-btn:last-child{grid-column:1 / -1}
+  .cc-btn{padding:.7rem .8rem;font-size:.82rem}
+}
+
+/* Tercih paneli */
+.cc-overlay{position:fixed;inset:0;z-index:100;background:rgba(30,28,26,.42);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
+  display:flex;align-items:center;justify-content:center;padding:16px;font-family:"Manrope",system-ui,sans-serif;color:#1E1C1A}
+.cc-dialog{width:min(640px,100%);max-height:min(88vh,820px);overflow:auto;background:#FBF8F3;border-radius:24px;border:1px solid rgba(255,255,255,.9);
+  box-shadow:0 40px 90px -30px rgba(0,0,0,.55);padding:1.8rem 1.8rem 1.4rem;position:relative;animation:cc-pop .3s ease}
+@keyframes cc-pop{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:none}}
+.cc-dialog h2{font-family:"Fraunces",Georgia,serif;font-weight:500;font-size:1.6rem;margin:0 2.5rem .5rem 0;line-height:1.15}
+.cc-dialog > p{font-size:.88rem;color:#4A4540;margin:0 0 1.2rem;line-height:1.55}
+.cc-close{position:absolute;top:14px;right:14px;width:42px;height:42px;border-radius:50%;border:0;background:#EDE5D8;cursor:pointer;font-size:1.3rem;line-height:1;color:#1E1C1A}
+.cc-cat{border:1px solid rgba(30,28,26,.12);border-radius:16px;padding:1rem 1.1rem;margin-bottom:.7rem;background:#fff}
+.cc-cat-head{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.cc-cat-head h3{font-size:.98rem;margin:0;font-weight:700}
+.cc-cat p{font-size:.83rem;color:#4A4540;margin:.45rem 0 0;line-height:1.5}
+.cc-state{font-size:.75rem;font-weight:700;color:#7A726A;white-space:nowrap}
+.cc-switch{position:relative;display:inline-flex;align-items:center;gap:.5rem;cursor:pointer;flex:none}
+.cc-switch input{position:absolute;opacity:0;width:1px;height:1px}
+.cc-switch span{width:48px;height:28px;border-radius:999px;background:#CFC6B8;position:relative;transition:background .2s}
+.cc-switch span::after{content:"";position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:transform .2s}
+.cc-switch input:checked+span{background:#1F8F55}
+.cc-switch input:checked+span::after{transform:translateX(20px)}
+.cc-switch input:disabled+span{opacity:.55;cursor:not-allowed}
+.cc-details{margin-top:.55rem;font-size:.8rem}
+.cc-details summary{cursor:pointer;color:#8A5D2B;font-weight:700}
+.cc-details ul{margin:.5rem 0 0;padding-left:1.1rem;color:#4A4540;line-height:1.5}
+.cc-details li{margin-bottom:.35rem}
+.cc-dialog-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:.55rem;margin-top:1.1rem;position:sticky;bottom:-1.4rem;background:#FBF8F3;padding:.8rem 0 1.2rem}
+.cc-meta{font-size:.74rem;color:#7A726A;margin-top:.2rem}
+@media(max-width:560px){.cc-dialog{padding:1.4rem 1.1rem 1rem;border-radius:20px}.cc-dialog-actions{grid-template-columns:1fr}.cc-dialog h2{font-size:1.35rem}}
+
+/* İzin bekleyen dış içerik (Instagram) */
+.cc-embed{display:grid;grid-template-columns:auto 1fr auto;gap:1.2rem;align-items:center;border-radius:22px;padding:1.4rem 1.6rem;margin-bottom:1.6rem}
+.cc-embed .ico{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,#F2D7B0,#E7B9A6)}
+.cc-embed b{display:block;font-size:1.02rem;margin-bottom:.2rem}
+.cc-embed p{margin:0;font-size:.85rem;color:#4A4540;line-height:1.5}
+.cc-embed .cc-embed-actions{display:flex;gap:.5rem;flex-wrap:wrap;justify-content:flex-end}
+@media(max-width:760px){.cc-embed{grid-template-columns:1fr;text-align:left}.cc-embed .cc-embed-actions{justify-content:flex-start}}
+@media(prefers-reduced-motion:reduce){.cc-banner,.cc-dialog{animation:none}}
+/* sitenin genel summary stilini ezmemek için */
+.cc-details summary{font-family:"Manrope",system-ui,sans-serif;font-size:.8rem;font-weight:700;display:list-item;list-style:revert;color:#8A5D2B}
+.cc-details summary::after{content:none!important}
+.cc-details summary::-webkit-details-marker{display:revert}
+@media(max-width:560px){
+  .cc-banner{padding:1rem 1rem 1.05rem;gap:.75rem}
+  .cc-banner p{font-size:.78rem;line-height:1.5}
+  .cc-links{margin-top:.4rem;font-size:.76rem}
+  .cc-actions{grid-template-columns:repeat(3,1fr);gap:.4rem}
+  .cc-actions .cc-btn:last-child{grid-column:auto}
+  .cc-btn{font-size:.74rem;padding:.6rem .35rem;white-space:normal;line-height:1.2}
+}
+.cc-dialog details.cc-details{padding:0;border:0;margin-top:.55rem}
