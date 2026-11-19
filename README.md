@@ -4,6 +4,6 @@ Buca / İzmir'deki MNZ Perde için tek sayfalık web sitesi: özel ölçü perde
 
 - Tek dosya: `index.html` (HTML + CSS + JS, harici bağımlılık yok; yalnızca Google Fonts)
 - Ölçü randevu formu WhatsApp'a (0542 306 66 04) hazır mesaj olarak gider
-- GitHub Pages ile yayın: Settings → Pages → Branch: `main` / `(root)`
+- Yayın: GitHub Pages (Branch `main`, root) · Alan adı: https://mnzperde.com
 
 İletişim: Menderes Mah., Erdem Cd. No:167/A, 35370 Buca / İzmir · Instagram [@mnzperde](https://www.instagram.com/mnzperde/)
