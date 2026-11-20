@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MNZ Perde | Buca İzmir – Özel Ölçü Perde, Jaluzi ve Akıllı Ev</title>
 <meta name="description" content="MNZ Perde, Buca İzmir: özel ölçü tül ve fon perde, stor, zebra, plise, ahşap jaluzi, motorlu perde, duvar kağıdı ve döşemelik kumaş. Ölçü, tasarım, imalat ve montaj tek elden.">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1E1C1A">
 <link rel="canonical" href="https://mnzperde.com/">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
@@ -16,7 +22,7 @@
 <meta property="og:image" content="https://mnzperde.com/assets/hero-poster.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"HomeGoodsStore","name":"MNZ Perde","url":"https://mnzperde.com/","image":"https://mnzperde.com/assets/hero-poster.jpg","telephone":"+90 542 306 66 04",
+{"@context":"https://schema.org","@type":"HomeGoodsStore","name":"MNZ Perde","url":"https://mnzperde.com/","image":"https://mnzperde.com/assets/hero-poster.jpg","logo":"https://mnzperde.com/assets/logo-512.png","telephone":"+90 542 306 66 04",
 "address":{"@type":"PostalAddress","streetAddress":"Menderes Mah., Erdem Cd. No:167/A","addressLocality":"Buca","addressRegion":"İzmir","postalCode":"35370","addressCountry":"TR"},
 "areaServed":{"@type":"City","name":"İzmir"},"sameAs":["https://www.instagram.com/mnzperde/"],
 "description":"Özel ölçü perde, stor, zebra, plise, ahşap jaluzi, motorlu perde, duvar kağıdı, döşemelik kumaş, iç mimari ve akıllı ev sistemleri."}
@@ -70,7 +76,9 @@ h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.1;letter-spacing
 header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.45);backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);border-bottom:1px solid rgba(255,255,255,.7);box-shadow:0 8px 30px -20px rgba(60,40,20,.3)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
 .logo{display:flex;align-items:center;gap:.7rem;font-weight:700;letter-spacing:.2em;font-size:1.05rem}
-.logo-mark{width:38px;height:38px;border-radius:10px;background:var(--ink);display:grid;place-items:center}
+.logo-img{width:48px;height:48px;flex:none;filter:drop-shadow(0 4px 8px rgba(0,0,0,.25));transition:transform .4s}
+.logo:hover .logo-img{transform:rotate(-8deg) scale(1.05)}
+@media(max-width:520px){.logo-img{width:42px;height:42px}}
 .logo small{display:block;font-size:.6rem;letter-spacing:.32em;color:var(--muted);font-weight:600;margin-top:2px}
 .nav ul{display:flex;gap:2rem;list-style:none;font-size:.92rem;font-weight:500;color:var(--ink-2)}
 .nav ul a:hover{color:var(--brass)}
@@ -314,7 +322,7 @@ details p{margin-top:.8rem;color:var(--ink-2);max-width:44rem}
 footer{background:var(--ink);color:rgba(245,240,232,.7);padding:3.5rem 0 2rem;font-size:.9rem}
 .foot{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;padding-bottom:2rem;border-bottom:1px solid rgba(245,240,232,.15)}
 .foot .logo{color:var(--linen)}
-.foot .logo-mark{background:var(--brass)}
+.foot .logo-img{width:56px;height:56px}
 .foot nav{display:flex;gap:1.6rem;flex-wrap:wrap}
 .foot nav a:hover{color:var(--linen)}
 .copy{padding-top:1.5rem;font-size:.8rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
@@ -349,7 +357,7 @@ footer{background:var(--ink);color:rgba(245,240,232,.7);padding:3.5rem 0 2rem;fo
 <header>
   <div class="wrap nav">
     <a href="#top" class="logo">
-      <span class="logo-mark"><svg width="20" height="20" viewBox="0 0 20 20"><g fill="#F5F0E8"><rect x="2" y="2" width="16" height="2" rx="1"/><rect x="3" y="6" width="14" height="2" opacity=".8"/><rect x="3" y="10" width="14" height="2" opacity=".6"/><rect x="3" y="14" width="14" height="2" opacity=".4"/></g></svg></span>
+      <img class="logo-img" src="assets/logo.webp" width="48" height="48" alt="MNZ Perde logosu">
       <span>MNZ PERDE<small>BUCA · İZMİR</small></span>
     </a>
     <ul id="menu">
@@ -609,7 +617,7 @@ footer{background:var(--ink);color:rgba(245,240,232,.7);padding:3.5rem 0 2rem;fo
   <div class="wrap">
     <div class="foot">
       <div>
-        <a href="#top" class="logo"><span class="logo-mark"><svg width="20" height="20" viewBox="0 0 20 20"><g fill="#F5F0E8"><rect x="2" y="2" width="16" height="2" rx="1"/><rect x="3" y="6" width="14" height="2" opacity=".8"/><rect x="3" y="10" width="14" height="2" opacity=".6"/><rect x="3" y="14" width="14" height="2" opacity=".4"/></g></svg></span><span>MNZ PERDE<small style="color:rgba(245,240,232,.5)">BUCA · İZMİR</small></span></a>
+        <a href="#top" class="logo"><img class="logo-img" src="assets/logo.webp" width="48" height="48" alt="MNZ Perde logosu"><span>MNZ PERDE<small style="color:rgba(245,240,232,.5)">BUCA · İZMİR</small></span></a>
         <p style="margin-top:1rem;max-width:22rem">Perde, jaluzi, duvar kağıdı, döşemelik kumaş, iç mimari ve akıllı ev sistemleri.</p>
       </div>
       <nav><a href="cerez-politikasi.html">Çerez Politikası</a><a href="kvkk-aydinlatma-metni.html">KVKK Aydınlatma Metni</a><a href="#" data-cc-open role="button">Çerez Tercihleri</a><a href="#urunler">Ürünler</a><a href="#dene">Perdenizi Deneyin</a><a href="#surec">Süreç</a><a href="#ic-mimari">İç Mimari</a><a href="#iletisim">İletişim</a></nav>
