@@ -107,7 +107,7 @@
       '<section class="cc-banner" role="region" aria-labelledby="cc-title" aria-describedby="cc-text">' +
         '<div><h2 id="cc-title">Gizliliğiniz Bizim İçin Önemli</h2>' +
         '<p id="cc-text">MNZ Perde olarak web sitemizin düzgün çalışmasını sağlamak ve izniniz doğrultusunda deneyiminizi geliştirmek için çerezlerden yararlanabiliriz. Zorunlu çerezler dışında kalan çerezleri kabul etmek, reddetmek veya tercihlerinizi yönetmek tamamen sizin kontrolünüzdedir.</p>' +
-        '<div class="cc-links"><a href="cerez-politikasi.html">Çerez Politikası</a><a href="kvkk-aydinlatma-metni.html">KVKK Aydınlatma Metni</a></div></div>' +
+        '<div class="cc-links"><a href="/cerez-politikasi.html">Çerez Politikası</a><a href="/kvkk-aydinlatma-metni.html">KVKK Aydınlatma Metni</a></div></div>' +
         '<div class="cc-actions">' +
           '<button type="button" class="cc-btn" data-cc="accept">Tümünü Kabul Et</button>' +
           '<button type="button" class="cc-btn" data-cc="reject">Tümünü Reddet</button>' +
@@ -148,7 +148,7 @@
         '<div class="cc-dialog" role="dialog" aria-modal="true" aria-labelledby="cc-dlg-title" aria-describedby="cc-dlg-desc">' +
           '<button type="button" class="cc-close" data-cc="close" aria-label="Tercih panelini kapat">×</button>' +
           '<h2 id="cc-dlg-title">Çerez Tercihleri</h2>' +
-          '<p id="cc-dlg-desc">Zorunlu olanlar dışındaki kategoriler varsayılan olarak kapalıdır. Dilediğiniz zaman sayfanın altındaki “Çerez Tercihleri” bağlantısından değiştirebilir veya geri alabilirsiniz. Ayrıntılar için <a href="cerez-politikasi.html" style="color:#8A5D2B;font-weight:700">Çerez Politikası</a>.</p>' +
+          '<p id="cc-dlg-desc">Zorunlu olanlar dışındaki kategoriler varsayılan olarak kapalıdır. Dilediğiniz zaman sayfanın altındaki “Çerez Tercihleri” bağlantısından değiştirebilir veya geri alabilirsiniz. Ayrıntılar için <a href="/cerez-politikasi.html" style="color:#8A5D2B;font-weight:700">Çerez Politikası</a>.</p>' +
           CATEGORIES.map(function (c) { return catHtml(c, state); }).join('') +
           '<p class="cc-meta">' + meta + '</p>' +
           '<div class="cc-dialog-actions">' +

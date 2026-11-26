@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://mnzperde.com/</loc><lastmod>2026-11-19</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://mnzperde.com/cerez-politikasi.html</loc><lastmod>2026-11-19</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
-  <url><loc>https://mnzperde.com/kvkk-aydinlatma-metni.html</loc><lastmod>2026-11-19</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://mnzperde.com/</loc><lastmod>2026-11-26</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://mnzperde.com/buca-perde/</loc><lastmod>2026-11-26</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mnzperde.com/plise-perde/</loc><lastmod>2026-11-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mnzperde.com/zebra-perde/</loc><lastmod>2026-11-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mnzperde.com/stor-perde/</loc><lastmod>2026-11-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mnzperde.com/ahsap-jaluzi/</loc><lastmod>2026-11-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mnzperde.com/tul-fon-perde/</loc><lastmod>2026-11-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mnzperde.com/motorlu-perde/</loc><lastmod>2026-11-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mnzperde.com/hizmet-bolgeleri/</loc><lastmod>2026-11-26</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mnzperde.com/cerez-politikasi.html</loc><lastmod>2026-11-26</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://mnzperde.com/kvkk-aydinlatma-metni.html</loc><lastmod>2026-11-26</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
 </urlset>
